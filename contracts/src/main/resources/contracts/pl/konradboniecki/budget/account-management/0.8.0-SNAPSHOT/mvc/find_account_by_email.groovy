@@ -4,7 +4,7 @@ import org.springframework.cloud.contract.spec.Contract
 	Contract.make {
 		name("find_account_by_email__shouldReturn200WhenEmailFound")
 		request {
-			url("/api/account-mgt/v1/accounts/existing_email@find_by_mail.com") {
+			url("/api/account-mgt/v1/accounts/existing_email@find-by-mail.com") {
 				queryParameters {
 					parameter("findBy", "email")
 				}
