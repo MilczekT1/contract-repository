@@ -4,7 +4,7 @@ import org.springframework.cloud.contract.spec.Contract
 	Contract.make {
 		name("find_account_by_email__shouldReturn200WhenEmailFound")
 		request {
-			url("/api/account-mgt/v1/accounts/existing_email@password_management.com") {
+			url("/api/account-mgt/v1/accounts/existing_email@password-management.com") {
 				queryParameters {
 					parameter("findBy", "email")
 				}
@@ -33,7 +33,7 @@ import org.springframework.cloud.contract.spec.Contract
 	Contract.make {
 		name("find_account_by_email__shouldReturn404WhenEmailNotFound")
 		request {
-			url("/api/account-mgt/v1/accounts/not_existing_email@password_management.com") {
+			url("/api/account-mgt/v1/accounts/not_existing_email@password-management.com") {
 				queryParameters {
 					parameter("findBy", "email")
 				}
@@ -53,7 +53,7 @@ import org.springframework.cloud.contract.spec.Contract
 				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{6}Z)")),
 				"status": 404,
 				"statusName": "NOT_FOUND",
-				"message": "Account with email: not_existing_email@password_management.com not found."
+				"message": "Account with email: not_existing_email@password-management.com not found."
 			)
 		}
 	}
