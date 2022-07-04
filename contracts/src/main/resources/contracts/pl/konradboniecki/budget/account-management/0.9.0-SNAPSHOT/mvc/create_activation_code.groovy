@@ -19,7 +19,7 @@ import org.springframework.cloud.contract.spec.Contract
 			body(
 				id: anyUuid(),
 				accountId: fromRequest().path(4),
-				activationCode: anyUuid(),
+				activationCodeValue: anyUuid(),
 				created: anyNonEmptyString()
 			)
 		}
