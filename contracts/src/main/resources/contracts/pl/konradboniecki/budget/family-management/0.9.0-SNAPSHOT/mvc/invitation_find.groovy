@@ -21,7 +21,7 @@ import org.springframework.cloud.contract.spec.Contract
 				familyId: anyUuid(),
 				email: anyEmail(),
 				invitationCode: anyUuid(),
-				created: value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{6}Z)")),
+				created: value(regex(isoDateTime())),
 				registered: regex("(true|false)")
 			)
 		}
@@ -42,7 +42,7 @@ import org.springframework.cloud.contract.spec.Contract
 				contentType applicationJson()
 			}
 			body(
-				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{6}Z)")),
+				"timestamp": value(regex(isoDateTime())),
 				"status": 404,
 				"statusName": "NOT_FOUND",
 				"message": "invitation with id: 801bcae9-348a-4cd3-9793-7e6234461d5f not found."
