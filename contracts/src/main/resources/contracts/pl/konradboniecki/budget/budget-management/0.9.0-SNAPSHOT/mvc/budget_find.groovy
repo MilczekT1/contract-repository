@@ -53,7 +53,7 @@ import org.springframework.cloud.contract.spec.Contract
 				contentType applicationJson()
 			}
 			body(
-				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{6}Z)")),
+				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{1,9}Z)")),
 				"status": 404,
 				"statusName": "NOT_FOUND",
 				"message": "Budget not found for family with id: b0492093-d920-492c-b5de-6e4046962410"

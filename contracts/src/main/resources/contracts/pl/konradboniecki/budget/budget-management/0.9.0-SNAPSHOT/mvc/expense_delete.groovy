@@ -34,7 +34,7 @@ import org.springframework.cloud.contract.spec.Contract
 				contentType applicationJson()
 			}
 			body(
-				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{6}Z)")),
+				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{1,9}Z)")),
 				"status": 404,
 				"statusName": "NOT_FOUND",
 				"message": "Expense with id: 570df03f-a98e-4752-bdab-3f7fa67e7945 not found in budget with id: 19e8147b-f6cb-46fa-b1d4-a0cb1ead4a08."

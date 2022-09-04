@@ -56,7 +56,7 @@ import org.springframework.cloud.contract.spec.Contract
 				contentType applicationJson()
 			}
 			body(
-				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{6}Z)")),
+				"timestamp": value(regex("([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.\\d{1,9}Z)")),
 				"status": 400,
 				"statusName": "BAD_REQUEST",
 				"message": "Budget id in body and path don't match."
